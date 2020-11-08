@@ -2,7 +2,7 @@
   "name": "cmpe-gmv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://arturacu.github.io/CMPE-GMV",
+  "homepage": "http://Team-e-motion.github.io/CMPE-GMV-2020",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
