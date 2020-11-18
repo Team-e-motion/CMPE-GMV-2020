@@ -14,14 +14,20 @@ Note that _quince_ is the Spanish word for 15, which also contains an e. If you 
 
 You can check an example of the webpage deployed in the [github pages of this repository](https://Team-e-motion.github.io/CMPE-GMV-2020). 
 
-### 📋 Dependencies 
-
 ### 🔧 Installation
+To install all the dependencies you can use [npm](https://www.npmjs.com/), a package manager for the JavaScript programming language (if you do not have it yet, [click here](https://www.npmjs.com/get-npm) to get it!), simply run the following command:
+```
+npm install 
+```
 
 ### ⚙️ Running Tests 
 
 ### 📦 Deploying 
-
+To deploy the project in localhost you can run the following command after installing all the dependencies:
+```
+npm run start 
+```
+If you want to deploy the webpage to your github pages you will have to modify the [package.json](https://github.com/Team-e-motion/CMPE-GMV-2020/blob/main/package.json) file and change the "homepage" value to match your own github pages url.  
 ### ✒️ Authors 
 
 ### 📄 License 
