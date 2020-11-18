@@ -14,14 +14,14 @@ Note that _quince_ is the Spanish word for 15, which also contains an e. If you 
 
 You can check an example of the webpage deployed in the [github pages of this repository](https://Team-e-motion.github.io/CMPE-GMV-2020). 
 
-### Required dependencies 📋
+### 📋 Dependencies 
 
-### Installing the package 🔧
+### 🔧 Installation
 
-### Running Tests ⚙️
+### ⚙️ Running Tests 
 
-### Deploying 📦
+### 📦 Deploying 
 
-### Authors ✒️
+### ✒️ Authors 
 
-### License 📄
+### 📄 License 
