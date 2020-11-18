@@ -31,3 +31,4 @@ If you want to deploy the webpage to your github pages you will have to modify t
 ### ✒️ Authors 
 
 ### 📄 License 
+This project is licensed under the terms of the MIT license, check the [LICENSE](https://github.com/Team-e-motion/CMPE-GMV-2020/blob/main/LICENSE) file for more information.
