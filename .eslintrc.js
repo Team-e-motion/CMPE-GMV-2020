@@ -26,5 +26,8 @@ module.exports = {
     rules: {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
         'react/prop-types': ['error', { skipUndeclared: true }]
-    }
+    },
+    plugins: [
+        "only-warn"
+    ]
 };
