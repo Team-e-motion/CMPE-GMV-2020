@@ -20,6 +20,9 @@ To install all the dependencies you can use [npm](https://www.npmjs.com/), a pac
 npm install 
 ```
 
+### 📋 Git Hooks
+This project uses [ESLint](https://eslint.org/) to identify and report patterns in the code and ensure consistency and coherence through the files, it also helps to avoid common bugs while programming. We also use [Prettier](https://prettier.io/) to maintain a consistent style in all files of the project. In the project, there are some commands for eslint and prettier defined to check and solve format errors or bug issues, but to automate the process we use Git Hooks. We have configured [Husky](https://typicode.github.io/husky/#/) to ensure that every commit undergoes a check process before it is processed. 
+
 ### ⚙️ Running Tests 
 
 ### 📦 Deploying 
