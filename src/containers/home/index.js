@@ -1,10 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Home = () => {
-    return (
-        <div className="card">
-        </div>
-    );
+    return <div className="card"></div>;
 };
 
 export default Home;

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import IconButton from "@material-ui/core/IconButton";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import IconButton from '@material-ui/core/IconButton';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import LockIcon from '@material-ui/icons/Lock';
-import {makeStyles} from "@material-ui/core/styles";
-import {List, ListItem, ListItemText} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
+import { makeStyles } from '@material-ui/core/styles';
+import { List, ListItem, ListItemText } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 
 const useStyles = makeStyles({
     navbarDisplayFlex: {
@@ -38,7 +38,6 @@ const navLinks = [
 ];
 
 const NavBar = () => {
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -56,7 +55,7 @@ const NavBar = () => {
         <AppBar position="static">
             <Toolbar variant="dense">
                 <IconButton edge="start" color="inherit" aria-label="menu">
-                    <LockIcon/>
+                    <LockIcon />
                 </IconButton>
                 <Typography variant="h6" color="inherit">
                     e-motion
@@ -64,8 +63,7 @@ const NavBar = () => {
                 <List
                     component="nav"
                     aria-labelledby="main navigation"
-                    className={classes.navDisplayFlex}
-                >
+                    className={classes.navDisplayFlex}>
                     {navLinks.map(({ title, path }) => (
                         <a href={path} key={title} className={classes.linkText}>
                             <ListItem button>
@@ -79,28 +77,33 @@ const NavBar = () => {
                     aria-controls="menu-appbar"
                     aria-haspopup="true"
                     color="inherit"
-                ><img src={process.env.PUBLIC_URL + '/icons/spain-flag.svg'} alt="Español" width="52" height="32" onClick={handleMenu} />
+                    onClick={handleMenu}>
+                    <img
+                        src={process.env.PUBLIC_URL + '/icons/spain-flag.svg'}
+                        alt="Español"
+                        width="52"
+                        height="32"
+                    />
                 </Button>
                 <Menu
                     id="menu-appbar"
                     anchorEl={anchorEl}
                     anchorOrigin={{
                         vertical: 'top',
-                        horizontal: 'right',
+                        horizontal: 'right'
                     }}
                     keepMounted
                     transformOrigin={{
                         vertical: 'top',
-                        horizontal: 'right',
+                        horizontal: 'right'
                     }}
                     open={open}
-                    onClose={handleClose}
-                >
+                    onClose={handleClose}>
                     <MenuItem onClick={handleClose}>Español</MenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>
     );
-}
+};
 
 export default NavBar;
