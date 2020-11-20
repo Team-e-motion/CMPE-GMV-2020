@@ -15,7 +15,7 @@ export const counter = (str) => [...str].reduce((a, c) => (a[c] = a[c] + 1 || 1)
 
 /* Remove punctuation characters from a given string */
 export const removePunctuation = (str) =>
-    str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ');
+    str.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ');
 
 /* Remove whitespaces from a given string */
 export const removeWhitespaces = (str) => str.replace(/\s/g, '');

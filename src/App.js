@@ -14,7 +14,7 @@ class App extends Component {
                 <div className="App">
                     <NavBar />
                     <Switch>
-                        <Route path="/CMPE-GMV-2020/home" component={Home} />
+                        <Route exact path="/CMPE-GMV-2020" component={Home} />
                         <Route path="/CMPE-GMV-2020/certify" component={Certify} />
                         <Route path="/CMPE-GMV-2020/validate" component={Validate} />
                         <Route path="/CMPE-GMV-2020/about" component={About} />

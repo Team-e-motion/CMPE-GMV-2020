@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 });
 
 const navLinks = [
-    { title: `Inicio`, path: `/CMPE-GMV-2020/home` },
+    { title: `Inicio`, path: `/CMPE-GMV-2020` },
     { title: `Firmar mensaje`, path: `/CMPE-GMV-2020/certify` },
     { title: `Comprobar firma`, path: `/CMPE-GMV-2020/validate` },
     { title: `¿Quiénes somos?`, path: `/CMPE-GMV-2020/about` }
