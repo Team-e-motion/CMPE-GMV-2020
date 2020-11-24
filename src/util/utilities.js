@@ -31,3 +31,83 @@ export const standardizeString = (str) =>
 /* Counts the number of letters from the latin alphabet in a message and returns a dictionary with the values */
 export const countFrequencyLetters = (str) =>
     counter(standardizeString(removeWhitespaces(removePunctuation(str))));
+
+/* Transforms a number to words in Spanish */
+export const numberToWord = (number) => {
+    const outlierNums = {
+        0: 'cero',
+        10: 'diez',
+        11: 'once',
+        12: 'doce',
+        13: 'trece',
+        14: 'catorce',
+        15: 'quince',
+        20: 'veinte',
+        100: 'cien',
+        1000: 'mil'
+    };
+    if (number in outlierNums) {
+        return outlierNums[number];
+    }
+    if (number < 100) {
+        const units = [
+            '',
+            'una',
+            'dos',
+            'tres',
+            'cuatro',
+            'cinco',
+            'seis',
+            'siete',
+            'ocho',
+            'nueve'
+        ];
+        const tens = [
+            '',
+            'dieci',
+            'veinti',
+            'treinta',
+            'cuarenta',
+            'cincuenta',
+            'sesenta',
+            'setenta',
+            'ochenta',
+            'noventa'
+        ];
+        if (number % 10 === 0) {
+            return tens[Math.floor(number / 10)];
+        }
+        if (number < 30) {
+            return tens[Math.floor(number / 10)] + units[Math.floor(number % 10)];
+        }
+        return tens[Math.floor(number / 10)] + ' y ' + units[Math.floor(number / 10)];
+    }
+    if (number < 1000) {
+        const hundreds = [
+            '',
+            'ciento',
+            'doscientas',
+            'trescientas',
+            'cuatrocientas',
+            'quinientas',
+            'seiscientas',
+            'setecientas',
+            'ochocientas',
+            'novecientas'
+        ];
+        if (number % 100 === 0) {
+            return hundreds[Math.floor(number / 100)];
+        }
+        return hundreds[Math.floor(number / 100)] + ' ' + numberToWord(number % 100);
+    }
+    if (number < 1000000) {
+        if (number < 2000) {
+            return 'mil ' + numberToWord(number % 1000);
+        }
+        if (number % 1000 === 0) {
+            return numberToWord(Math.floor(number / 1000)) + ' mil';
+        }
+        return numberToWord(Math.floor(number / 1000)) + ' mil ' + numberToWord(number % 1000);
+    }
+    return -1;
+};

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { NavRouter } from './components/navrouter';
+import { NavRouter } from './navrouter';
 
 class App extends Component {
     render() {
