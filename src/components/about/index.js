@@ -1,5 +1,9 @@
 import React from 'react';
 
 export const About = () => {
-    return <h1>{'about'}</h1>;
+    return (
+        <div>
+            <h1>{'about'}</h1>
+        </div>
+    );
 };

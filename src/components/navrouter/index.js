@@ -4,11 +4,12 @@ import { Home } from '../home';
 import { Certify } from '../certify';
 import Validate from '../validate';
 import { About } from '../about';
+import './style.css';
 
 export const NavRouter = () => {
     return (
         <BrowserRouter>
-            <nav>
+            <nav className="navbar">
                 <ul>
                     <li>
                         <Link to="/CMPE-GMV-2020">Home</Link>
@@ -23,11 +24,11 @@ export const NavRouter = () => {
                         <Link to="/CMPE-GMV-2020/about">About</Link>
                     </li>
                 </ul>
-                <Route exact path="/CMPE-GMV-2020" component={Home} />
-                <Route exact path="/CMPE-GMV-2020/certify" component={Certify} />
-                <Route exact path="/CMPE-GMV-2020/validate" component={Validate} />
-                <Route exact path="/CMPE-GMV-2020/about" component={About} />
             </nav>
+            <Route exact path="/CMPE-GMV-2020" component={Home} />
+            <Route exact path="/CMPE-GMV-2020/certify" component={Certify} />
+            <Route exact path="/CMPE-GMV-2020/validate" component={Validate} />
+            <Route exact path="/CMPE-GMV-2020/about" component={About} />
         </BrowserRouter>
     );
 };

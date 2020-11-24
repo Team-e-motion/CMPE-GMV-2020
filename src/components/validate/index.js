@@ -3,7 +3,7 @@ import React from 'react';
 const Validate = () => {
     return (
         <div className="Validate">
-            <p>Validate</p>
+            <h1>Validate</h1>
         </div>
     );
 };

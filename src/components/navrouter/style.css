@@ -1,0 +1,32 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1874d4;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    -webkit-transition: all 0.6s;
+    background-color: #f61313;
+}
+
+.navbar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #8ab3ea;
+}

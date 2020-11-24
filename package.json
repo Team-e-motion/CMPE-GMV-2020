@@ -4,17 +4,12 @@
     "private": true,
     "homepage": "https://Team-e-motion.github.io/CMPE-GMV-2020",
     "dependencies": {
-        "@material-ui/core": "^4.11.0",
-        "@material-ui/icons": "^4.9.1",
-        "@material-ui/lab": "^4.0.0-alpha.56",
         "@testing-library/jest-dom": "^5.11.5",
         "@testing-library/react": "^11.1.1",
         "@testing-library/user-event": "^12.2.0",
-        "fontsource-roboto": "^3.0.3",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "react-scripts": "4.0.0",
-        "web-vitals": "^0.2.4"
+        "react-scripts": "4.0.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -49,7 +44,7 @@
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.13.0",
+        "eslint": "^7.14.0",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-only-warn": "^1.0.2",
         "eslint-plugin-prettier": "^3.1.4",
