@@ -5,7 +5,7 @@ import { Certify } from '../certify';
 import Validate from '../validate';
 import { About } from '../about';
 
-export const NavigationBar = () => {
+export const NavRouter = () => {
     return (
         <BrowserRouter>
             <nav>
