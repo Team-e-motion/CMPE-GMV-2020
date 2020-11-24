@@ -21,7 +21,6 @@ export class Certify extends React.Component {
 
     generatePostscript(message, certifyingChar) {
         const output = certifyMessage(message, certifyingChar);
-
         this.setState({ outputMessage: output });
         this.setState({ outputVisible: true });
     }

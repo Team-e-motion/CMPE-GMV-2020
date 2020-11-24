@@ -32,6 +32,10 @@ export const standardizeString = (str) =>
 export const countFrequencyLetters = (str) =>
     counter(standardizeString(removeWhitespaces(removePunctuation(str))));
 
+/* Given a character and a string, counts the number of characters in the string */
+export const countFrequencySingleLetter = (str, char) =>
+    [...str].reduce((t, c) => t + (char === c ? 1 : 0), 0);
+
 /* Transforms a number to words in Spanish */
 export const numberToWord = (number) => {
     const outlierNums = {
@@ -80,7 +84,7 @@ export const numberToWord = (number) => {
         if (number < 30) {
             return tens[Math.floor(number / 10)] + units[Math.floor(number % 10)];
         }
-        return tens[Math.floor(number / 10)] + ' y ' + units[Math.floor(number / 10)];
+        return tens[Math.floor(number / 10)] + ' y ' + units[number % 10];
     }
     if (number < 1000) {
         const hundreds = [
@@ -111,3 +115,7 @@ export const numberToWord = (number) => {
     }
     return -1;
 };
+
+/* Counts the frequency of a given character in the word which express a given number */
+export const charFrequencyInNumber = (character, number) =>
+    countFrequencySingleLetter(numberToWord(number), character);

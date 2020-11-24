@@ -1,18 +1,26 @@
-import { countFrequencyLetters, numberToWord } from '../util/utilities';
+import {
+    alphabetChars,
+    charFrequencyInNumber,
+    countFrequencyLetters,
+    numberToWord
+} from '../util/utilities';
 
 const messageFirstPart = 'en este mensaje aparece ';
 const messageSecondPart = ' veces la letra ';
+const messageSecondPartSingle = ' vez la letra ';
 
 const postscriptConstantFrequencies = countFrequencyLetters(messageFirstPart + messageSecondPart);
 
+const kConstantFirstMillion = 20;
+
 export const certifyMessage = (message, certifyingChar) => {
+    const messageFrequencies = countFrequencyLetters(message);
     return certifyingChar === 'all'
-        ? certifyMessageAllChars(message)
-        : certifyMessageSingleChar(message, certifyingChar);
+        ? certifyMessageAllChars(messageFrequencies)
+        : certifyMessageSingleChar(messageFrequencies, certifyingChar);
 };
 
-const certifyMessageSingleChar = (message, certifyingChar) => {
-    const messageFrequencies = countFrequencyLetters(message);
+const certifyMessageSingleChar = (messageFrequencies, certifyingChar) => {
     const messageCharFrequency =
         certifyingChar in messageFrequencies ? messageFrequencies[certifyingChar] : 0;
     const postscriptConstantFrequency =
@@ -20,9 +28,32 @@ const certifyMessageSingleChar = (message, certifyingChar) => {
             ? postscriptConstantFrequencies[certifyingChar]
             : 0;
     const messageCharFreq = messageCharFrequency + postscriptConstantFrequency + 1; // Note that it always contains at least the letter at the end of the message
-    return messageFirstPart + numberToWord(messageCharFreq) + messageSecondPart + certifyingChar;
+
+    const bound = kConstantFirstMillion + messageCharFreq;
+
+    let minValidFreq = messageCharFreq;
+    for (
+        ;
+        minValidFreq < bound &&
+        charFrequencyInNumber(certifyingChar, minValidFreq) + messageCharFreq !== minValidFreq;
+        minValidFreq++
+    );
+
+    if (minValidFreq < bound) {
+        return (
+            messageFirstPart +
+            numberToWord(minValidFreq) +
+            (minValidFreq > 1 ? messageSecondPart : messageSecondPartSingle) +
+            certifyingChar
+        );
+    } else {
+        return 'There is no valid postscript for the message.';
+    }
 };
 
-const certifyMessageAllChars = (message) => {
-    return 'null ' + message;
+const certifyMessageAllChars = (messageFrequencies) => {
+    return (
+        messageFirstPart +
+        alphabetChars.map((char) => ' ' + char.toUpperCase() + messageSecondPart + char)
+    );
 };
