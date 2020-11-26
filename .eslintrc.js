@@ -13,6 +13,7 @@ module.exports = {
         }
     },
     env: {
+        "jest/globals": true,
         browser: true, // Enables browser globals like window and document
         amd: true, // Enables require() and define() as global variables as per the amd spec.
         node: true // Enables Node.js global variables and Node.js scoping.
@@ -21,6 +22,7 @@ module.exports = {
         'eslint:recommended',
         'prettier',
         'plugin:react/recommended',
+        "plugin:jest/style",
         'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
     ],
     rules: {
@@ -28,6 +30,6 @@ module.exports = {
         'react/prop-types': ['error', { skipUndeclared: true }]
     },
     plugins: [
-        "only-warn"
+        "only-warn", "jest"
     ]
 };
