@@ -1,5 +1,65 @@
 /* Length of the alphabet used, Latin alphabet */
 export const alphabetLength = 26;
+/* First part of the message postscript */
+export const messageFirstPart = 'en este mensaje aparece ';
+/* Second part of the message postscript when frequency > 1 */
+export const messageSecondPart = ' veces la letra ';
+/* Second part of the message postscript when frequency == 1 */
+export const messageSecondPartSingle = ' vez la letra ';
+/* K-Constant for the first million numbers written in Spanish */
+export const kConstantFirstMillion = 20;
+
+/* Transcript for numbers in Spanish */
+const numbersTranscript = {
+    y: 0,
+    una: 1,
+    dos: 2,
+    tres: 3,
+    cuatro: 4,
+    cinco: 5,
+    seis: 6,
+    siete: 7,
+    ocho: 8,
+    nueve: 9,
+    diez: 10,
+    once: 11,
+    doce: 12,
+    trece: 13,
+    catorce: 14,
+    quince: 15,
+    dieciseis: 16,
+    diecisiete: 17,
+    dieciocho: 18,
+    diecinueve: 19,
+    veinte: 20,
+    veintiuna: 21,
+    veintidos: 22,
+    veintitres: 23,
+    veinticuatro: 24,
+    veinticinco: 25,
+    veintiseis: 26,
+    veintisiete: 27,
+    veintiocho: 28,
+    veintinueve: 29,
+    treinta: 30,
+    cuarenta: 40,
+    cincuenta: 50,
+    sesenta: 60,
+    setenta: 70,
+    ochenta: 80,
+    noventa: 90,
+    cien: 100,
+    ciento: 100,
+    doscientas: 200,
+    trescientas: 300,
+    cuatrocientas: 400,
+    quinientas: 500,
+    seiscientas: 600,
+    setecientas: 700,
+    ochocientas: 800,
+    novecientas: 900,
+    mil: 1000
+};
 
 /* Function to generate the range of values given the start, end and the step size */
 export const range = (start, end, step) =>
@@ -11,7 +71,7 @@ export const alphabetChars = range('a'.charCodeAt(0), 'z'.charCodeAt(0), 1).map(
 );
 
 /* Count frequency of characters in a string */
-export const counter = (str) => [...str].reduce((a, c) => (a[c] = a[c] + 1 || 1) && a, {});
+export const charCounter = (str) => [...str].reduce((a, c) => (a[c] = a[c] + 1 || 1) && a, {});
 
 /* Remove punctuation characters from a given string */
 export const removePunctuation = (str) =>
@@ -30,13 +90,14 @@ export const standardizeString = (str) =>
 
 /* Counts the number of letters from the latin alphabet in a message and returns a dictionary with the values */
 export const countFrequencyLetters = (str) =>
-    counter(standardizeString(removeWhitespaces(removePunctuation(str))));
+    charCounter(standardizeString(removeWhitespaces(removePunctuation(str))));
 
 /* Given a character and a string, counts the number of characters in the string */
 export const countFrequencySingleLetter = (str, char) =>
     [...str].reduce((t, c) => t + (char === c ? 1 : 0), 0);
 
-/* Transforms a number to words in Spanish */
+/* Transforms a number to words in Spanish
+ *   TODO: Throw exception for numbers greater or equal than 1000000 */
 export const numberToWord = (number) => {
     const outlierNums = {
         0: 'cero',
@@ -113,7 +174,34 @@ export const numberToWord = (number) => {
         }
         return numberToWord(Math.floor(number / 1000)) + ' mil ' + numberToWord(number % 1000);
     }
-    return -1;
+};
+
+/* Transforms a set of words into a number */
+export const wordToNumber = (sentence) => {
+    const sentenceWords = sentence.split(' ');
+
+    let result = 0;
+    let hundreds = false;
+    const forLength = sentenceWords.length-1;
+
+    for(let i =forLength; i >= 0; i--){
+        let currentWords = sentenceWords[i];
+        if(result >= 0 &&  currentWords in numbersTranscript){
+            if(currentWords === 'mil' && i !== 0){
+                hundreds = true;
+            }
+            else if(hundreds){
+                result += numbersTranscript[currentWords] * 1000
+            }
+            else{
+                result += numbersTranscript[currentWords]
+            }
+        }
+        else {
+            return result = -1;
+        }
+    }
+    return result;
 };
 
 /* Counts the frequency of a given character in the word which express a given number */

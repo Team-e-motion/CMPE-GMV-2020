@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { Home } from '../sections/home';
 import { Certify } from '../sections/certify';
-import Validate from '../sections/validate';
+import { Validate } from '../sections/validate';
 import { About } from '../sections/about';
 import './style.css';
 

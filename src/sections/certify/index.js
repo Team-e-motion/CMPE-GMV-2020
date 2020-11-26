@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCertificationForm } from '../../components/message-form';
+import { MessageCertificationForm } from '../../components/message-certification-form';
 import { MessageOutput } from '../../components/message-output';
 import { certifyMessage } from '../../algorithm/certify';
 

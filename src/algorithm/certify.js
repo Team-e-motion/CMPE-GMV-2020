@@ -2,16 +2,14 @@ import {
     alphabetChars,
     charFrequencyInNumber,
     countFrequencyLetters,
-    numberToWord
+    numberToWord,
+    messageFirstPart,
+    messageSecondPart,
+    kConstantFirstMillion,
+    messageSecondPartSingle
 } from '../util/utilities';
 
-const messageFirstPart = 'en este mensaje aparece ';
-const messageSecondPart = ' veces la letra ';
-const messageSecondPartSingle = ' vez la letra ';
-
 const postscriptConstantFrequencies = countFrequencyLetters(messageFirstPart + messageSecondPart);
-
-const kConstantFirstMillion = 20;
 
 export const certifyMessage = (message, certifyingChar) => {
     const messageFrequencies = countFrequencyLetters(message);
