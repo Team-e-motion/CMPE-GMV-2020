@@ -182,23 +182,20 @@ export const wordToNumber = (sentence) => {
 
     let result = 0;
     let hundreds = false;
-    const forLength = sentenceWords.length-1;
+    const forLength = sentenceWords.length - 1;
 
-    for(let i =forLength; i >= 0; i--){
+    for (let i = forLength; i >= 0; i--) {
         let currentWords = sentenceWords[i];
-        if(result >= 0 &&  currentWords in numbersTranscript){
-            if(currentWords === 'mil' && i !== 0){
+        if (result >= 0 && currentWords in numbersTranscript) {
+            if (currentWords === 'mil' && i !== 0) {
                 hundreds = true;
+            } else if (hundreds) {
+                result += numbersTranscript[currentWords] * 1000;
+            } else {
+                result += numbersTranscript[currentWords];
             }
-            else if(hundreds){
-                result += numbersTranscript[currentWords] * 1000
-            }
-            else{
-                result += numbersTranscript[currentWords]
-            }
-        }
-        else {
-            return result = -1;
+        } else {
+            return (result = -1);
         }
     }
     return result;
