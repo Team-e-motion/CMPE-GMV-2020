@@ -24,13 +24,18 @@ npm install
 This project uses [ESLint](https://eslint.org/) to identify and report patterns in the code and ensure consistency and coherence through the files, it also helps to avoid common bugs while programming. We also use [Prettier](https://prettier.io/) to maintain a consistent style in all files of the project. In the project, there are some commands for eslint and prettier defined to check and solve format errors or bug issues, but to automate the process we use Git Hooks. We have configured [Husky](https://typicode.github.io/husky/#/) to ensure that every commit undergoes a check process before it is processed. 
 
 ### ⚙️ Running Tests 
+We are using [Jest](https://jestjs.io/) to test React components as well as VanillaJS utility functions and algorithms. To run the tests you can use the following command:
+```
+npm run test 
+```
 
 ### 📦 Deploying 
 To deploy the project in localhost you can run the following command after installing all the dependencies:
 ```
 npm run start 
 ```
-If you want to deploy the webpage to your github pages you will have to modify the [package.json](https://github.com/Team-e-motion/CMPE-GMV-2020/blob/main/package.json) file and change the "homepage" value to match your own github pages url.  
+If you want to deploy the webpage to your github pages you will have to modify the [package.json](https://github.com/Team-e-motion/CMPE-GMV-2020/blob/main/package.json) file and change the "homepage" value to match your own github pages url.
+
 ### ✒️ Authors 
 
 ### 📄 License 
