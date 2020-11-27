@@ -11,6 +11,7 @@ export const kConstantFirstMillion = 20;
 
 /* Transcript for numbers in Spanish */
 const numbersTranscript = {
+    '': 0,
     y: 0,
     una: 1,
     dos: 2,
@@ -195,7 +196,7 @@ export const wordToNumber = (sentence) => {
                 result += numbersTranscript[currentWords];
             }
         } else {
-            return (result = -1);
+            result = -1;
         }
     }
     return result;
