@@ -86,6 +86,7 @@ export const standardizeString = (str) =>
     str
         .toLowerCase()
         .replace('ñ', '')
+        .replace(/\?/g, '')
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '');
 

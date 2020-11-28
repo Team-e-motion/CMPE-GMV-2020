@@ -1,4 +1,4 @@
-const moduleUtilities = require('./utilities');
+const moduleUtilities = require('../utilities');
 
 const wordsToNumberTest = {
     una: 1,
@@ -79,16 +79,60 @@ const wordsToNumberTest = {
     'novecientas mil novecientas noventa y nueve': 900999
 };
 
-test('Words to number transcript', () => {
-    const entries = Object.entries(wordsToNumberTest);
-    for (const [words, number] of entries) {
-        expect(moduleUtilities.wordToNumber(words)).toBe(number);
-    }
-});
+describe('Utility Functions', () => {
+    it('Should map words to numbers', () => {
+        const entries = Object.entries(wordsToNumberTest);
+        for (const [words, number] of entries) {
+            expect(moduleUtilities.wordToNumber(words)).toBe(number);
+        }
+    });
 
-test('Number to words transcript', () => {
-    const entries = Object.entries(wordsToNumberTest);
-    for (const [words, number] of entries) {
-        expect(moduleUtilities.numberToWord(number)).toBe(words);
-    }
+    it('Should map numbers to words', () => {
+        const entries = Object.entries(wordsToNumberTest);
+        for (const [words, number] of entries) {
+            expect(moduleUtilities.numberToWord(number)).toBe(words);
+        }
+    });
+
+    it('Should count frequency of all letters in a message', () => {
+        const word = 'abcdefghijklmnopqrstuvwxyz';
+        const frequencies = {
+            a: 1,
+            b: 1,
+            c: 1,
+            d: 1,
+            e: 1,
+            f: 1,
+            g: 1,
+            h: 1,
+            i: 1,
+            j: 1,
+            k: 1,
+            l: 1,
+            m: 1,
+            n: 1,
+            o: 1,
+            p: 1,
+            q: 1,
+            r: 1,
+            s: 1,
+            t: 1,
+            u: 1,
+            v: 1,
+            w: 1,
+            x: 1,
+            y: 1,
+            z: 1
+        };
+
+        const word2 = 'ab?b!.Aa.#BA ablA%L% b(A)Bb!';
+        const frequencies2 = {
+            a: 7,
+            b: 7,
+            l: 2
+        };
+
+        expect(moduleUtilities.countFrequencyLetters(word)).toEqual(frequencies);
+        expect(moduleUtilities.countFrequencyLetters(word2)).toEqual(frequencies2);
+    });
 });
