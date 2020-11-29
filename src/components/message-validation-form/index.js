@@ -8,9 +8,9 @@ export const MessageValidationForm = (props) => {
                 name="message"
                 value={props.message}
                 onChange={props.onChange}
-                placeholder="Write your message with the postscript you want to validate!"
+                placeholder="Escribe el mensaje con su firma para verificar que está correctamente firmado..."
             />
-            <input type="submit" value="Validate" />
+            <input type="submit" value="Verificar" />
         </form>
     );
 };

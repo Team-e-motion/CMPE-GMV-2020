@@ -54,7 +54,8 @@ export class Certify extends React.Component {
                 <MessageOutput
                     visible={this.state.outputVisible}
                     loading={this.state.outputLoading}
-                    message={this.state.outputMessage}
+                    message={this.state.message}
+                    outputMessage={this.state.outputMessage}
                     clipboard={true}
                 />
             </div>

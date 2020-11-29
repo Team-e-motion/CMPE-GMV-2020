@@ -6,7 +6,8 @@ import {
     messageFirstPart,
     messageSecondPart,
     kConstantFirstMillion,
-    messageSecondPartSingle
+    messageSecondPartSingle,
+    noPostscriptAvailable
 } from '../util/utilities';
 
 const postscriptConstantFrequencies = countFrequencyLetters(messageFirstPart + messageSecondPart);
@@ -45,7 +46,7 @@ const certifyMessageSingleChar = (messageFrequencies, certifyingChar) => {
             certifyingChar
         );
     } else {
-        return 'There is no valid postscript for the message.';
+        return noPostscriptAvailable;
     }
 };
 

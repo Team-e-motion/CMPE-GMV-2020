@@ -22,7 +22,7 @@ export class Validate extends React.Component {
         const isValid = isValidMessageWithPostscript(this.state.message);
         console.log('isValid: ', isValid);
         this.setState({
-            outputMessage: isValid ? 'The postscript is valid' : 'The postscript is not valid'
+            outputMessage: isValid ? 'La firma es válida' : 'La firma no es válida'
         });
         this.setState({ outputVisible: true });
         event.preventDefault();
@@ -46,7 +46,8 @@ export class Validate extends React.Component {
                 <MessageOutput
                     visible={this.state.outputVisible}
                     loading={this.state.outputLoading}
-                    message={this.state.outputMessage}
+                    message={this.state.message}
+                    outputMessage={this.state.outputMessage}
                     clipboard={false}
                 />
             </div>

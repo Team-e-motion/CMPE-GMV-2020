@@ -1,3 +1,5 @@
+import { noPostscriptAvailable } from '../../util/utilities';
+
 const moduleCertify = require('../certify');
 
 describe('Certify Algorithm', () => {
@@ -41,7 +43,7 @@ describe('Certify Algorithm', () => {
     });
 
     it('Should not single char certify nonvalid messages', () => {
-        const expectedPostscript = 'There is no valid postscript for the message.';
+        const expectedPostscript = noPostscriptAvailable;
 
         // Letter which sometimes appears in Spanish numbers, but do appears in the message and postscript
         const message = 'aaaaaaaa';

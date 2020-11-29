@@ -7,10 +7,10 @@ import { About } from '../sections/about';
 import './style.css';
 
 const routes = [
-    { path: '/', name: 'Home', Component: Home },
-    { path: '/certify', name: 'Certify', Component: Certify },
-    { path: '/validate', name: 'Validate', Component: Validate },
-    { path: '/about', name: 'About', Component: About }
+    { path: '/CMPE-GMV-2020', name: 'Inicio', Component: Home },
+    { path: '/CMPE-GMV-2020/certify', name: 'Certificar', Component: Certify },
+    { path: '/CMPE-GMV-2020/validate', name: 'Verificar', Component: Validate },
+    { path: '/CMPE-GMV-2020/about', name: 'Sobre nosotros', Component: About }
 ];
 
 export const NavRouter = () => {

@@ -6,11 +6,15 @@ export const MessageOutput = (props) => {
     return (
         <div className="message-output">
             <p>
-                {props.visible === true ? (props.loading === true ? 'Loading' : props.message) : ''}
+                {props.visible === true
+                    ? props.loading === true
+                        ? 'Calculando la posdata...'
+                        : props.outputMessage
+                    : ''}
             </p>
             {props.clipboard ? (
-                <CopyToClipboard text={props.message}>
-                    <button>Copy to clipboard </button>
+                <CopyToClipboard text={props.message + '\n' + props.outputMessage}>
+                    <button>Copiar el mensaje y la posdata al portapapeles</button>
                 </CopyToClipboard>
             ) : null}
         </div>

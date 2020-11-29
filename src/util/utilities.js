@@ -1,3 +1,5 @@
+/* Constant message for no postscript available  */
+export const noPostscriptAvailable = 'No existe firma válida posible para este mensaje.';
 /* Length of the alphabet used, Latin alphabet */
 export const alphabetLength = 26;
 /* First part of the message postscript */
