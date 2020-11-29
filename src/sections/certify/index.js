@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageCertificationForm } from '../../components/message-certification-form';
 import { MessageOutput } from '../../components/message-output';
 import { certifyMessage } from '../../algorithm/certify';
+import './style.css';
 
 export class Certify extends React.Component {
     constructor(props) {
@@ -43,7 +44,7 @@ export class Certify extends React.Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <h1>Certify</h1>
                 <MessageCertificationForm
                     onSubmit={this.handleSubmit}
@@ -56,7 +57,7 @@ export class Certify extends React.Component {
                     loading={this.state.outputLoading}
                     message={this.state.outputMessage}
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

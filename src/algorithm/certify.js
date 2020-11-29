@@ -49,6 +49,8 @@ const certifyMessageSingleChar = (messageFrequencies, certifyingChar) => {
     }
 };
 
+// TODO: Implement official certification (all chars)
+// eslint-disable-next-line
 const certifyMessageAllChars = (messageFrequencies) => {
     return (
         messageFirstPart +

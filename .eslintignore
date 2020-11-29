@@ -4,4 +4,4 @@ public
 src/README.md
 src/LICENSE
 .prettierignore
-
+src/**/*.css

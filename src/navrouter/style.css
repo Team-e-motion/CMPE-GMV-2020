@@ -1,32 +1,71 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1874d4;
+:root {
+    --home-color: rgb(0, 149, 243);
+    --certify-color: rgb(226, 6, 6);
+    --validate-color: rgb(8, 183, 2);
+    --about-color: rgb(226, 214, 0);
 }
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    -webkit-transition: all 0.6s;
-    background-color: #f61313;
-}
-
-.navbar {
+.nav-router {
     display: grid;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
-    background-color: #8ab3ea;
+    padding: 15px 12px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(243, 242, 242, 0.6);
+}
+.nav-router ul {
+    /*  border-bottom: 2px solid rgba(47, 44, 44, 0.75); */
+}
+
+.nav-router li {
+    text-align: center;
+    padding: 10px 20px;
+    transition: 0.3s;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-router a {
+    text-decoration: none;
+    font-size: large;
+    padding: 4px 10px;
+    color: rgba(71, 68, 68, 0.89);
+}
+
+.nav-router li:nth-child(1):hover a {
+    -webkit-transition: all 0.3s;
+    border-bottom: 3px solid var(--home-color);
+}
+
+.nav-router li:nth-child(2):hover a {
+    -webkit-transition: all 0.3s;
+    border-bottom: 3px solid var(--certify-color);
+}
+
+.nav-router li:nth-child(3):hover a {
+    -webkit-transition: all 0.3s;
+    border-bottom: 3px solid var(--validate-color);
+}
+
+.nav-router li:nth-child(4):hover a {
+    -webkit-transition: all 0.3s;
+    border-bottom: 3px solid var(--about-color);
+}
+
+.nav-router li:nth-child(1) .is-active {
+    border-bottom: 3px solid var(--home-color);
+}
+
+.nav-router li:nth-child(2) .is-active {
+    border-bottom: 3px solid var(--certify-color);
+}
+
+.nav-router li:nth-child(3) .is-active {
+    border-bottom: 3px solid var(--validate-color);
+}
+
+.nav-router li:nth-child(4) .is-active {
+    border-bottom: 3px solid var(--about-color);
 }
