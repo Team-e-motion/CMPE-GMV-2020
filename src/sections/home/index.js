@@ -1,5 +1,10 @@
 import React from 'react';
+import './style.css';
 
 export const Home = () => {
-    return <h1>{'Home'}</h1>;
+    return (
+        <div className="home-section">
+            <h1>{'Home'}</h1>
+        </div>
+    );
 };

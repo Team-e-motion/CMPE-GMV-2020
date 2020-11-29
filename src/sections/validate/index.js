@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageOutput } from '../../components/message-output';
 import { MessageValidationForm } from '../../components/message-validation-form';
 import { isValidMessageWithPostscript } from '../../algorithm/verify';
+import './style.css';
 
 export class Validate extends React.Component {
     constructor(props) {
@@ -36,7 +37,7 @@ export class Validate extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="validation-section">
                 <MessageValidationForm
                     onSubmit={this.handleSubmit}
                     onChange={this.handleInputChange}
@@ -46,8 +47,9 @@ export class Validate extends React.Component {
                     visible={this.state.outputVisible}
                     loading={this.state.outputLoading}
                     message={this.state.outputMessage}
+                    clipboard={false}
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

@@ -6,53 +6,35 @@ import { Validate } from '../sections/validate';
 import { About } from '../sections/about';
 import './style.css';
 
+const routes = [
+    { path: '/', name: 'Home', Component: Home },
+    { path: '/certify', name: 'Certify', Component: Certify },
+    { path: '/validate', name: 'Validate', Component: Validate },
+    { path: '/about', name: 'About', Component: About }
+];
+
 export const NavRouter = () => {
     return (
         <BrowserRouter>
             <nav className="nav-router">
                 <ul>
-                    <li>
-                        <NavLink
-                            exact
-                            to="/CMPE-GMV-2020"
-                            className="nav-item"
-                            activeClassName="is-active">
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            exact
-                            to="/CMPE-GMV-2020/certify"
-                            className="nav-item"
-                            activeClassName="is-active">
-                            Certify
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            exact
-                            to="/CMPE-GMV-2020/validate"
-                            className="nav-item"
-                            activeClassName="is-active">
-                            Validate
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            exact
-                            to="/CMPE-GMV-2020/about"
-                            className="nav-item"
-                            activeClassName="is-active">
-                            About
-                        </NavLink>
-                    </li>
+                    {routes.map((route) => (
+                        <li key={route.path}>
+                            <NavLink
+                                key={route.path}
+                                exact
+                                to={route.path}
+                                className="nav-item"
+                                activeClassName="is-active">
+                                {route.name}
+                            </NavLink>
+                        </li>
+                    ))}
                 </ul>
             </nav>
-            <Route exact path="/CMPE-GMV-2020" component={Home} />
-            <Route exact path="/CMPE-GMV-2020/certify" component={Certify} />
-            <Route exact path="/CMPE-GMV-2020/validate" component={Validate} />
-            <Route exact path="/CMPE-GMV-2020/about" component={About} />
+            {routes.map(({ path, Component }) => (
+                <Route key={path} exact path={path} component={Component} />
+            ))}
         </BrowserRouter>
     );
 };
