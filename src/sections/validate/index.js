@@ -36,8 +36,7 @@ export class Validate extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Validate</h1>
+            <React.Fragment>
                 <MessageValidationForm
                     onSubmit={this.handleSubmit}
                     onChange={this.handleInputChange}
@@ -48,7 +47,7 @@ export class Validate extends React.Component {
                     loading={this.state.outputLoading}
                     message={this.state.outputMessage}
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -1,0 +1,9 @@
+.certification-section {
+    margin-top: 25px;
+    padding-bottom: 99%;
+    background-color: #d95b5b;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

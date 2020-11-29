@@ -44,8 +44,7 @@ export class Certify extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
-                <h1>Certify</h1>
+            <div className="certification-section">
                 <MessageCertificationForm
                     onSubmit={this.handleSubmit}
                     onChange={this.handleInputChange}
@@ -57,7 +56,7 @@ export class Certify extends React.Component {
                     loading={this.state.outputLoading}
                     message={this.state.outputMessage}
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

@@ -62,7 +62,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(226, 223, 223, 0.8);
+    background: rgba(231, 231, 231, 0.8);
     animation: animate 30s linear infinite;
     bottom: -150px;
     pointer-events: none;
@@ -114,8 +114,8 @@
 
 .boxes .backgroundBox:nth-child(7) {
     left: 35%;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     animation-delay: 7s;
 }
 

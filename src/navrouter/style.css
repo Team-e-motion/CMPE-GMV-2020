@@ -12,7 +12,8 @@
     padding: 15px 12px;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(243, 242, 242, 0.6);
+    position: relative;
+    background-color: rgba(243, 242, 242, 0.95);
 }
 .nav-router ul {
     /*  border-bottom: 2px solid rgba(47, 44, 44, 0.75); */
