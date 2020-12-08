@@ -12,7 +12,8 @@ export class Certify extends React.Component {
             certifyingChar: 'all',
             outputVisible: false,
             outputLoading: false,
-            outputMessage: ''
+            outputMessage: '',
+            clipboard: false
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,6 +25,7 @@ export class Certify extends React.Component {
         const output = certifyMessage(message, certifyingChar);
         this.setState({ outputMessage: output });
         this.setState({ outputVisible: true });
+        this.setState({ clipboard: true });
     }
 
     handleSubmit(event) {
@@ -56,7 +58,7 @@ export class Certify extends React.Component {
                     loading={this.state.outputLoading}
                     message={this.state.message}
                     outputMessage={this.state.outputMessage}
-                    clipboard={true}
+                    clipboard={this.state.clipboard}
                 />
             </div>
         );

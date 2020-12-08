@@ -2,7 +2,7 @@
     --home-color: rgb(0, 149, 243);
     --certify-color: rgb(226, 6, 6);
     --validate-color: rgb(8, 183, 2);
-    --about-color: rgb(226, 214, 0);
+    --about-color: rgb(108, 26, 239);
 }
 
 .nav-router {
@@ -37,6 +37,9 @@
 
 .nav-router li:nth-child(1):hover a {
     -webkit-transition: all 0.3s;
+}
+
+.nav-router li:nth-child(1):hover a {
     border-bottom: 3px solid var(--home-color);
 }
 
