@@ -1,9 +1,47 @@
-.about-section {
-    margin-top: 25px;
-    padding-bottom: 99%;
-    background-color: #bebaee;
-    text-align: center;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
+* {
+    font-family: Raleway, sans-serif;
+}
+
+.cardContainer {
+}
+
+.cardBack {
+}
+
+.cardFront {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* hide back of pane during swap */
+.cardFront,
+.cardBack {
+    /* 	-webkit-backface-visibility: hidden; */
+    /* 	        backface-visibility: hidden; */
+}
+
+/* front pane, placed above back */
+.cardFront {
+    z-index: 99;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.cardBack {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px;
 }

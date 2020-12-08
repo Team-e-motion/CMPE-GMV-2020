@@ -24,3 +24,5 @@ yarn-error.log*
 
 # Ignore IntelliJ project folder
 /.idea
+
+package-lock.json
