@@ -1,0 +1,14 @@
+.imgContainer {
+    height: 35%;
+    margin: 0;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    background: #444;
+    background-size: cover;
+}
+
+.imgStyles {
+    width: 300px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}

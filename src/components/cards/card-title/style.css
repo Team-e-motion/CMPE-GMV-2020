@@ -1,0 +1,19 @@
+.titleStyle {
+    color: #555;
+    font-weight: 100;
+    outline: none;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -75px;
+}
+
+.subTitleStyle {
+    position: relative;
+    top: -95px;
+    text-align: center;
+    font-weight: 100;
+    color: #888;
+}

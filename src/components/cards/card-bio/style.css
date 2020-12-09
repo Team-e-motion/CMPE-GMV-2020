@@ -1,0 +1,10 @@
+.bioContainer {
+    position: relative;
+    top: -95px;
+}
+
+.bio {
+    color: #444;
+    padding: 0 30px;
+    text-align: center;
+}
