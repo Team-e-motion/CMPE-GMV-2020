@@ -5,7 +5,6 @@ import './style.css';
 export const About = () => {
     return (
         <div className="body">
-            <h1 className="header">Sobre nosotros</h1>
             <div className="flex">
                 <Card
                     imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
