@@ -21,7 +21,7 @@ export const About = () => {
                 <Card
                     type="inma"
                     imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://octodex.github.com/images/femalecodertocat.png"
+                    avatarSrc="https://i.pinimg.com/originals/c7/1a/da/c71adadd309ceaf6457ad65afe8ac4ef.png"
                 />
             </div>
         </div>
