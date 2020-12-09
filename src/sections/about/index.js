@@ -8,20 +8,20 @@ export const About = () => {
             <div className="flex">
                 <Card
                     imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://i.pinimg.com/originals/7f/d1/28/7fd128981d2df6449ad294f5aba5131d.png"
+                    avatarSrc="https://octodex.github.com/images/spidertocat.png"
                     targetId="antonio"
                 />
 
                 <Card
                     type="arturo"
                     imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://i.pinimg.com/originals/32/0c/7d/320c7dd2dc0117b3df1a0384dbecbbab.jpg"
+                    avatarSrc="https://i.pinimg.com/originals/73/ed/50/73ed50d9bfde8459aa2407f561224508.png"
                 />
 
                 <Card
                     type="inma"
                     imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://i.pinimg.com/originals/69/94/d6/6994d6f82c1ebf7b1f4fd911d7ffd140.jpg"
+                    avatarSrc="https://octodex.github.com/images/femalecodertocat.png"
                 />
             </div>
         </div>
