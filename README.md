@@ -38,5 +38,9 @@ If you want to deploy the webpage to your github pages you will have to modify t
 
 ### ✒️ Authors 
 
+ - [Antonio Acuaviva Huertos](https://www.linkedin.com/in/antonio-acuaviva): Mathematics and Physics student at Complutense University of Madrid.
+ - [Arturo Acuaviva Huertos](https://www.linkedin.com/in/arturo-acuaviva) ([Arturacu](https://github.com/Arturacu)): Computer Science and Mathematics student at Complutense University of Madrid.
+ - [Inmaculada Pérez Garbín](https://es.linkedin.com/in/inmaculada-perez-garbin/es-es) ([Inmapg](https://github.com/Inmapg)): Computer Science and Mathematics student at Complutense University of Madrid.
+ 
 ### 📄 License 
 This project is licensed under the terms of the MIT license, check the [LICENSE](https://github.com/Team-e-motion/CMPE-GMV-2020/blob/main/LICENSE) file for more information.

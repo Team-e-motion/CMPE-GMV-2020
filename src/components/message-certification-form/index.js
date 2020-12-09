@@ -12,9 +12,6 @@ export const MessageCertificationForm = (props) => {
                 placeholder="Escribe aquí el mensaje para el que quieres generar la posdata..."
             />
             <select name="certifyingChar" value={props.certifyingChar} onChange={props.onChange}>
-                <option key={'all'} value="all">
-                    Firma oficial
-                </option>
                 {utilities.alphabetChars.map((character) => (
                     <option key={character} value={character}>
                         Firma con letra {character}
