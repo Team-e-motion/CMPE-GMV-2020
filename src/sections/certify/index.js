@@ -9,7 +9,7 @@ export class Certify extends React.Component {
         super(props);
         this.state = {
             message: '',
-            certifyingChar: 'all',
+            certifyingChar: 'a',
             outputVisible: false,
             outputLoading: false,
             outputMessage: '',

@@ -1,0 +1,16 @@
+.infoBox {
+    margin-top: 30px;
+    display: block;
+    width: 600px;
+    height: 320px;
+    position: relative;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    border: #cfcdcd;
+}
+
+.infoBox a {
+    font-weight: bold;
+}

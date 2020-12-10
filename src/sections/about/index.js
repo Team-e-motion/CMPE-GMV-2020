@@ -7,21 +7,21 @@ export const About = () => {
         <div className="body">
             <div className="flex">
                 <Card
-                    imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://octodex.github.com/images/spidertocat.png"
+                    imgSrc={process.env.PUBLIC_URL + '/images/background/default.jpg'}
+                    avatarSrc={process.env.PUBLIC_URL + '/images/avatar/antonio_avatar.png'}
                     targetId="antonio"
                 />
 
                 <Card
                     type="arturo"
-                    imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://i.pinimg.com/originals/73/ed/50/73ed50d9bfde8459aa2407f561224508.png"
+                    imgSrc={process.env.PUBLIC_URL + '/images/background/default.jpg'}
+                    avatarSrc={process.env.PUBLIC_URL + '/images/avatar/arturo_avatar.png'}
                 />
 
                 <Card
                     type="inma"
-                    imgSrc="https://c4.wallpaperflare.com/wallpaper/151/30/574/space-stars-the-universe-space-wallpaper-preview.jpg"
-                    avatarSrc="https://i.pinimg.com/originals/c7/1a/da/c71adadd309ceaf6457ad65afe8ac4ef.png"
+                    imgSrc={process.env.PUBLIC_URL + '/images/background/default.jpg'}
+                    avatarSrc={process.env.PUBLIC_URL + '/images/avatar/inma_avatar.png'}
                 />
             </div>
         </div>
