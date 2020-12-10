@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CMPE-GMV-2020/static/css/main.9803f317.chunk.css",
+    "main.js": "/CMPE-GMV-2020/static/js/main.bf8c54a9.chunk.js",
+    "main.js.map": "/CMPE-GMV-2020/static/js/main.bf8c54a9.chunk.js.map",
+    "runtime-main.js": "/CMPE-GMV-2020/static/js/runtime-main.278ab9a6.js",
+    "runtime-main.js.map": "/CMPE-GMV-2020/static/js/runtime-main.278ab9a6.js.map",
+    "static/js/2.82211b23.chunk.js": "/CMPE-GMV-2020/static/js/2.82211b23.chunk.js",
+    "static/js/2.82211b23.chunk.js.map": "/CMPE-GMV-2020/static/js/2.82211b23.chunk.js.map",
+    "index.html": "/CMPE-GMV-2020/index.html",
+    "static/css/main.9803f317.chunk.css.map": "/CMPE-GMV-2020/static/css/main.9803f317.chunk.css.map",
+    "static/js/2.82211b23.chunk.js.LICENSE.txt": "/CMPE-GMV-2020/static/js/2.82211b23.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.278ab9a6.js",
+    "static/js/2.82211b23.chunk.js",
+    "static/css/main.9803f317.chunk.css",
+    "static/js/main.bf8c54a9.chunk.js"
+  ]
+}
