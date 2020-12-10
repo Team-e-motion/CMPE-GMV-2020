@@ -1,9 +1,9 @@
 .validation-section {
-    margin-top: 25px;
     padding-bottom: 99%;
     background-color: #b7d9bf;
     text-align: center;
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
